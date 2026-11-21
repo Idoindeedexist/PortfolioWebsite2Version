@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xander Myers | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="mainScreen">
+      <div id="loadScreen" class="loadScreen" role="status" aria-live="polite">
+        <img class="loadGif" src="assets/fallBoyWalk.gif" alt="" />
+        <div class="loadIngText">INITIALIZING ROBCO SYSTEM...</div>
+      </div>
+
+      <video
+        class="backVideo"
+        id="bgVideo"
+        aria-hidden="true"
+        playsinline
+        loop
+        muted
+        autoplay
+        preload="auto"
+      >
+        <source src="assets/TerminalEffectVideo.mp4" type="video/mp4" />
+      </video>
+
+      <section class="terminal" id="terminal" hidden>
+        <header class="terminalHeader">
+          <h1>ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM</h1>
+          <p>COPYRIGHT 2075-2077 ROBCO INDUSTRIES</p>
+          <p>- PERSONAL PORTFOLIO TERMINAL -</p>
+        </header>
+
+        <section class="terminalWelcome" aria-label="Welcome message">
+          <p>PORTFOLIO OF XANDER MYERS</p>
+          <p>Game Software Developer(Student)</p>
+          <p id="welcomeText">&gt; Welcome, USER</p>
+        </section>
+
+        <hr />
+
+        <main class="terminalLayout">
+          <nav
+            class="terminalMenu menuPanel"
+            id="terminalMenu"
+            aria-label="Portfolio menu"
+          >
+            <a
+              class="menuOption"
+              href="about.html"
+              data-message="LOADING ABOUT ME..."
+            >
+              <span class="menuCursor">&gt;</span>
+              <span class="menuText">About Me</span>
+            </a>
+
+            <a
+              class="menuOption"
+              href="skills.html"
+              data-message="LOADING SKILLS..."
+            >
+              <span class="menuCursor">&gt;</span>
+              <span class="menuText">Skills</span>
+            </a>
+
+            <a
+              class="menuOption"
+              href="projects.html"
+              data-message="LOADING PROJECT ARCHIVES..."
+            >
+              <span class="menuCursor">&gt;</span>
+              <span class="menuText">Project Archives</span>
+            </a>
+
+            <a
+              class="menuOption"
+              href="game.html"
+              data-message="LOADING SHIFTING BET..."
+            >
+              <span class="menuCursor">&gt;</span>
+              <span class="menuText">Game</span>
+            </a>
+
+            <a
+              class="menuOption"
+              href="contact.html"
+              data-message="LOADING CONTACT..."
+            >
+              <span class="menuCursor">&gt;</span>
+              <span class="menuText">Contact</span>
+            </a>
+          </nav>
+
+          <figure class="panel gifPanel">
+            <div class="photo-shape-fg">
+              <img
+                src="assets/MyBoyThumbsUP.gif"
+                alt="Xander's avatar giving a thumbs up"
+              />
+            </div>
+          </figure>
+
+          <article class="panel introPanel">
+            <div class="tabBar" role="group" aria-label="Home information">
+              <button
+                type="button"
+                class="tabButton"
+                data-pane="paneIntro"
+                aria-pressed="true"
+              >
+                INTRO
+              </button>
+
+              <button
+                type="button"
+                class="tabButton"
+                data-pane="paneSkills"
+                aria-pressed="false"
+              >
+                SKILLS
+              </button>
+
+              <button
+                type="button"
+                class="tabButton"
+                data-pane="paneProjects"
+                aria-pressed="false"
+              >
+                LATEST PROJECTS
+              </button>
+            </div>
+
+            <div id="paneIntro">
+              <h2>WHO IS XANDER?</h2>
+
+              <p>
+                Motivated Computer Technical student seeking a part-time
+                position. Brings hands-on experience in Unity, C#, gameplay
+                programming, and team-based game development, along with strong
+                problem-solving skills and a willingness to learn.
+              </p>
+            </div>
+
+            <div id="paneSkills" hidden>
+              <h2>SKILLS OVERVIEW</h2>
+
+              <ul class="skillList">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>C#</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Unity</li>
+                <li>Unreal Engine</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+
+            <div id="paneProjects" hidden>
+              <h2>LATEST PROJECTS</h2>
+
+              <ul id="latestProjects">
+                <li>
+                  <a href="game.html" data-message="LOADING SHIFTING BET...">
+                    Blackjack (JavaScript Game)
+                  </a>
+                </li>
+
+                <li>WizardCard Game (Unreal Game)</li>
+
+                <li>Fallout Terminal Website (HTML/CSS/JavaScript Project)</li>
+              </ul>
+
+              <a
+                class="terminalButton"
+                href="projects.html"
+                data-message="LOADING PROJECT ARCHIVES..."
+              >
+                View All Projects
+              </a>
+            </div>
+          </article>
+
+          <aside class="panel musicPanel musicPlayer" id="musicPlayer" hidden>
+            <p id="trackName">NO TRACK</p>
+
+            <div class="musicControls">
+              <button type="button" id="prevTrack" aria-label="Previous track">
+                &lt;
+              </button>
+
+              <button type="button" id="musicButton">PLAY</button>
+
+              <button type="button" id="nextTrack" aria-label="Next track">
+                &gt;
+              </button>
+            </div>
+
+            <audio id="backgroundMusic" loop></audio>
+          </aside>
+        </main>
+
+        <footer class="terminalFooter">
+          <div
+            class="terminalPrompt"
+            role="log"
+            aria-live="polite"
+            aria-label="Terminal messages"
+          >
+            <span class="promptSymbol" aria-hidden="true">&gt;</span>
+            <span id="terminalOutput" class="terminalOutput"></span>
+            <span class="blockCursor" aria-hidden="true"></span>
+          </div>
+
+          <div class="footerBar">
+          
+
+            <p class="copyright">&copy; 2026 Xander Myers</p>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

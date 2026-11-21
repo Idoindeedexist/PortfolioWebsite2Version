@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 20px;
+    background-color: #130F36; /*12D900*/
+    color: #e8dfc5;
+    font-family: Arial, sans-serif;
+}
+.gameCon{
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.gameHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #b99a55;
+    padding: 10px;
+}
+.gameHead h1{
+    color: #d5b66b;
+    letter-spacing: 4px;
+}
+.balDisplay{
+    font-size: 20px;
+    color: #e4c66e;
+}
+.table{
+    background-color: #24513d;
+    border: 8px solid #65452d;
+    border-radius: 180px;
+    min-height: 400px;
+    margin: 25px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.handSec{
+    margin: 10px;
+}
+.handSec h2,
+.shiftSec h2{
+    letter-spacing: 3px;
+    color: #e4c66e;
+}
+.cardCon{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    min-height: 110px;
+}
+.gameMess{
+    font-size: 20px;
+    font-weight: bold;
+    color: #e4c66e;
+    min-height: 30px;
+}
+.playCard {
+    background-color: #f5f0e5;
+    color: #222;
+    width: 65px;
+    height: 95px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border: 2px solid #d2c7ae;
+    box-shadow: 2px 3px 5px #111;
+}
+.redCard {
+    color: #c62828;
+}
+.hidCard {
+    background-color: #293a54;
+    color: white;
+}
+.betSection,
+.actSec,
+.shiftSec{
+    margin: 25px 0;
+}
+.buttonSec{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px;
+}
+button {
+    background-color: #9b7943;
+    color: white;
+    border: 1px solid #d5b66b;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover:not(:disabled) {
+    background-color: #c19a55;
+}
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+#dealButton{
+    background-color: #286345;
+    min-width: 150px;
+}
+#doubButton{
+    background-color: #9b6339;
+}
+#shiftCon{
+    background-color: #252c27;
+    padding: 15px;
+    border-radius: 8px;
+}
+.shiftSec{
+    border-top: 2px solid #b99a55;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    .gameHead{
+        flex-direction: column;
+    }
+    .table{
+        border-radius: 50px;
+        padding: 15px;
+    }
+    .playCard{
+        width: 48px;
+        height: 72px;
+        font-size: 20px;
+    }
+    button{
+        padding: 10px 14px;
+    }
+}
+

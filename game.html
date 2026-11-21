@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifting Bet</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    
+    <main class="gameCon">
+        <header class="gameHead">
+            <h1>SHIFTING BET</h1>
+            <div class="balDisplay">
+                CHIPS: <span id="bal">100</span>
+            </div>
+        </header>
+
+        <section class="table">
+            <div class="handSec">
+                <h2>DEALER</h2>
+                <div id="dealHand" class="cardCon"></div>
+                <p>Total: <span id="dealTotal">0</span></p>
+            </div>
+
+            <div class="gameMess">
+                <p id="gameMess">Place your bet to begin.</p>
+            </div>
+
+            <div class="handSec">
+                <h2>PLAYER</h2>
+                <div id="playHand" class="cardCon"></div>
+                <p>Total: <span id="playTotal">0</span></p>
+            </div>
+        </section>
+
+        <section class="betSection">
+            <h2>!!!PLACE YOUR BETS!!!</h2>
+            <p>Current Bet: <span id="curBet">0</span></p>
+
+            <div class="buttonSec">
+                <button class="betButton" data-bet="1">+1</button>
+                <button class="betButton" data-bet="20">+20</button>
+                <button class="betButton" data-bet="50">+50</button>
+                <button class="betButton" data-bet="100">+100</button>
+                <button id="allInButton">ALL IN</button>
+            </div>
+
+            <button id="dealButton">DEAL</button>
+        </section>
+
+        <section class="actSec">
+            <button id="hitButton" disabled> HIT</button>
+            <button id="standButton" disabled> STAND</button>
+            <button id="doubButton" disabled> DOUBLE DOWN</button>
+        </section>
+
+         <section class="shiftSec">
+            <h2>SHIFTS</h2>
+            <div id="shiftCon">
+                <p>No Shifts equipped.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/blackjack.js"></script>
+</body>
+</html>
