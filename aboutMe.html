@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xander Myers | About Me</title>
+    <link rel="stylesheet" href="css/aboutStyle.css" />
+</head>
+
+<body>
+    <div id="mainScreen">
+        <div id="loadScreen" class="loadScreen" role="status" aria-live="polite">
+            <img class="loadGif" src="assets/fallBoyWalk.gif" alt="" />
+            <div class="loadIngText">INITIALIZING ROBCO SYSTEM...</div>
+        </div>
+
+        <video class="backVideo" id="bgVideo" aria-hidden="true" playsinline loop muted autoplay preload="auto">
+            <source src="assets/TerminalEffectVideo.mp4" type="video/mp4" hidden />
+        </video>
+
+        <section class="terminal" id="terminal">
+            <header class="terminalHeader">
+                <h1>ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM</h1>
+                <p>COPYRIGHT 2075-2077 ROBCO INDUSTRIES</p>
+                <p>- PERSONAL PORTFOLIO TERMINAL -</p>
+            </header>
+
+            <section class="terminalWelcome" aria-label="Welcome message">
+                <p>PORTFOLIO OF XANDER MYERS</p>
+                <p>Game Software Developer(Student)</p>
+                <p id="welcomeText">&gt; Welcome, USER</p>
+            </section>
+
+            <hr />
+
+            <main class="terminalLayout">
+                <article class="terminalMenu menuPanel">
+                        <div class="tabBar" role="group" aria-label="Home information">
+                            <button type="button" class="tabButton" data-pane="paneIntro" aria-pressed="true">
+                                PERSONAL INTRO
+                            </button>
+
+                            <button type="button" class="tabButton" data-pane="paneEducation" aria-pressed="false">
+                                EDUCATION
+                            </button>
+
+                            <button type="button" class="tabButton" data-pane="paneSkills" aria-pressed="false">
+                                TECHNICAL SKILLS
+                            </button>
+
+                            <button type="button" class="tabButton" data-pane="paneInterests" aria-pressed="false">
+                                PERSONAL INTERESTS
+                            </button>
+
+                            <button type="button" class="tabButton" data-pane="paneGoals" aria-pressed="false">
+                                CAREER GOALS
+                            </button>
+                        </div>
+
+                        <div id="paneIntro">
+                            <h2>WHO IS XANDER?</h2>
+
+                            <p>
+                                I am Xander Myers, A College student studying Computer Science
+                                technology, specifically in Video Game Programming. I'm Intreseted
+                                in Video Games collecting and learning about them in both a historical
+                                sense and How they were made. I inspire to be a form of designer in
+                                Video Games.
+                            </p>
+                        </div>
+
+                        <div id="paneEducation" hidden>
+                            <h2>EDUCATIONAL BACKGROUND</h2>
+
+                            <ul class="educationList">
+                                <li>Lasalle College, Montreal, QC — Computer Science Technology
+                                    <ul>Diploma of College Studies | 2024 – Current (2027)</ul>
+                                </li>
+                                <li>Rosemount, Montréal, QC — High School Diploma
+                                    <ul>Rosemount, Montréal, QC — High School Diploma | 2018 – 2024</ul>
+                                </li>
+                                <li>Coursera— Google Cybersecurity Professional Certificate
+                                    <ul>Coursera— Google Cybersecurity Professional Certificate | 2026</ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="paneSkills" hidden>
+                            <h2>SKILLS OVERVIEW</h2>
+
+                            <ul class="skillList">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Responsive Web Design</li>
+                                <li>GitHub</li>
+                                <li>C#</li>
+                                <li>C++</li>
+                                <li>Java</li>
+                                <li>SQL</li>
+                                <li>Unity</li>
+                                <li>Unreal Engine</li>
+                            </ul>
+                        </div>
+
+                        <div id="paneInterests" hidden>
+                            <h2>PERSONAL INTERESTS</h2>
+
+                            <ul class="interestsList">
+                                <li>My Personal Hobbies
+                                    <ul>Video Game collecting</ul>
+                                    <ul>Modding My Hardware</ul>
+                                    <ul>Video Game Restoration</ul>
+                                </li>
+                                <li>My Technology interests
+                                    <ul>Game engines</ul>
+                                    <ul>Troubleshooting and tech support</ul>
+                                    <ul>Level design and prototyping</ul>
+                                </li>
+                                <li>My Professional interests
+                                    <ul>Customer service and client relations</ul>
+                                    <ul>Leadership and team building</ul>
+                                    <ul>Storytelling and narrative design</ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="paneGoals" hidden>
+                            <h2>MY GOALS</h2>
+
+                            <p>
+                                My Ultimate goal is to become a some form of designer that understands
+                                technical aspects. I Want to develop my programming and design skills and
+                                understanding. I hope to become either a Level, Narritive, Game Mechaninc, or
+                                other game designer and expand those skills.
+                            </p>
+                        </div>
+
+                        <nav class="terminalMenu" id="terminalMenu" aria-label="Portfolio menu">
+                            <a class="menuOption" href="index.html" data-message="LOADING INDEX...">
+                                <span class="menuCursor">&gt;</span>
+                                <span class="menuText">Index</span>
+                            </a>
+                        </nav>
+
+                    </article>
+
+                    <figure class="panel gifPanel">
+                        <div class="photo-shape-fg">
+                            <img src="assets/falloutBoySittingSipping.gif" alt="Sitting&Sipping" />
+                        </div>
+                    </figure>
+
+                    <aside class="panel musicPanel musicPlayer" id="musicPlayer">
+                        <p id="trackName">NO TRACK</p>
+
+                        <div class="musicControls">
+                            <button type="button" id="prevTrack" aria-label="Previous track">
+                                &lt;
+                            </button>
+
+                            <button type="button" id="musicButton">PLAY</button>
+
+                            <button type="button" id="nextTrack" aria-label="Next track">
+                                &gt;
+                            </button>
+                        </div>
+
+                        <audio id="backgroundMusic" loop></audio>
+                    </aside>
+            </main>
+
+            <footer class="terminalFooter">
+                <div class="terminalPrompt" role="log" aria-live="polite" aria-label="Terminal messages">
+                    <span class="promptSymbol" aria-hidden="true">&gt;</span>
+                    <span id="terminalOutput" class="terminalOutput"></span>
+                    <span class="blockCursor" aria-hidden="true"></span>
+                </div>
+
+                <div class="footerBar">
+
+                    <p class="copyright">&copy; 2026 Xander Myers</p>
+                </div>
+            </footer>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

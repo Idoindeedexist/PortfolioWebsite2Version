@@ -90,7 +90,6 @@ hr{
 }
 .menuPanel,
 .panel {
-  border: 2px solid #33FF33;
   padding: 0.75rem 1rem;
   min-width: 0;
   margin: 0;
@@ -154,10 +153,11 @@ hr{
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 0.6rem;
+  color:#33FF33;
 }
 .tabButton {
   background: transparent;
-  color: inherit;
+  color: #33FF33;
   border: 2px solid #33FF33;
   font: inherit;
   padding: 0.1rem 0.6rem;

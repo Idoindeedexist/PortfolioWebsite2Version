@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "CustomMono"; 
+  src: url("CustomMono-Regular.woff2") format("woff2"),
+       url("CustomMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --terminalColor: #1C3315;
+  --screenBg: #021a0c;
+}
+h1, 
+h2, 
+h3,
+.menuCursor,
+.menuText,
+.promptSymbol,
+.terminalOutput,
+#terminalOutput,
+.blockCursor,
+li,
+ul,
+button[text],
+a[text],
+p{
+    font-family: "CustomMono", monospace;
+    color: #33FF33 ;
+}
+#prevTrack,
+#nextTrack,
+#musicButton{
+    color: #33FF33 ;
+    background-color: var(--terminalColor);
+}
+hr{
+    height: 2px;
+    background-color: #33FF33; 
+}
+#mainScreen {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+.backVideo {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+.terminal {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+.loadScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  background: var(--screenBg);
+}
+.loadScreen[hidden] {
+  display: none;
+}
+.loadGif {
+  width: clamp(90px, 20vw, 160px);
+  height: auto;
+}
+.terminalWelcome p {
+  margin: 0.15rem 0;
+}
+.terminalLayout {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "menu  gif"
+    "menu  intro"
+    "menu  music";
+  gap: 1rem;
+}
+.menuPanel,
+.panel {
+  
+  padding: 0.75rem 1rem;
+  min-width: 0;
+  margin: 0;
+}
+.panel {
+  overflow: auto;
+}
+.panel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+.panel a {
+  color: inherit;
+}
+.menuPanel {
+  padding-top: 1fr;
+}
+.gifPanel {
+  grid-area: gif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 14rem;
+}
+.introPanel {
+  grid-area: intro;
+}
+.musicPanel {
+  grid-area: music;
+}
+.gifPanel img {
+  max-width: 100%;
+  max-height: 16rem;
+  height: auto;
+}
+.terminalLayout #terminalMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.terminalLayout #terminalMenu .menuOption {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.3rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.terminalLayout #terminalMenu .menuOption:hover,
+.terminalLayout #terminalMenu .menuOption:focus-visible {
+  background: var(--terminalColor);
+  color: var(--screenBg);
+  outline: none;
+}
+.tabBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  color:#33FF33;
+}
+.tabButton {
+  background: transparent;
+  color: inherit;
+  border: 2px solid #33FF33;
+  font: inherit;
+  padding: 0.1rem 0.6rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.tabButton:hover,
+.tabButton[aria-pressed="true"] {
+  background: var(--terminalColor);
+  color: var(--screenBg);
+}
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.skillList li {
+  border: 2px solid #33FF33;
+  padding: 0.1rem 0.6rem;
+}
+.terminalButton {
+  display: inline-block;
+  margin-top: 0.5rem;
+  border: 2px solid #33FF33;
+  padding: 0.25rem 0.8rem;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.terminalButton:hover,
+.terminalButton:focus-visible {
+  background: var(--terminalColor);
+  color: var(--screenBg);
+}
+.musicPanel p {
+  margin: 0 0 0.4rem;
+}
+.musicControls {
+  display: flex;
+  gap: 0.5rem;
+}
+.terminalFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.terminalPrompt {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  border: 2px solid #33FF33;
+  padding: 0.5rem 1rem;
+  overflow-wrap: anywhere;
+}
+.blockCursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  background: var(--terminalColor);
+  animation: cursorBlink 1s steps(1) infinite;
+}
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+.footerBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  font-size: 0.85em;
+}
+.footerBar p {
+  margin: 0;
+}
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footerLinks a {
+  color: inherit;
+}
+@media (max-width: 800px) {
+  .terminalLayout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "menu"
+      "gif"
+      "intro"
+      "music";
+  }
+  .gifPanel {
+    min-height: 10rem;
+  }
+}
